@@ -1,17 +1,19 @@
+plugins {
+    id "java"
+    id "edu.wpi.first.GradleRIO" version "2024.3.2"
+}
+
 repositories {
     maven {
         url = uri("https://maven.pkg.github.com/frc4206/battleaid")
         credentials {
             username = project.findProperty("JPSeidlitz")
-            password = project.findProperty("TOKEN")
+            password = project.findProperty("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")
         }
    }
 }
 
-plugins {
-    id "java"
-    id "edu.wpi.first.GradleRIO" version "2024.3.2"
-}
+
 
 java {
     sourceCompatibility = JavaVersion.VERSION_17
@@ -80,7 +82,7 @@ dependencies {
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.1'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
-    implementation 'org.team4206:battleaid:0.1.1'
+    implementation 'org.tomlj:tomlj:1.1.1'
 }
 
 test {
