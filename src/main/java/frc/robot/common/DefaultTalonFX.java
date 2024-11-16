@@ -89,9 +89,6 @@ public class DefaultTalonFX {
         public int canID;
         public boolean inverted;
 
-        public long bigNumb;
-        public double smallNumb;
-
         public BasicSlot slot0;
         public BasicSlot slot1;
         public BasicSlot slot2;

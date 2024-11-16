@@ -6,10 +6,24 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.common.DefaultTalonFX;
+import frc.robot.common.LoadableConfig;
 
 public class Intake_Sub extends SubsystemBase {
   /** Creates a new Intake_Sub. */
-  public DefaultTalonFX m_intakeMotor = new DefaultTalonFX(40);
+
+  DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("intakeMotor");
+  
+  public class Config extends LoadableConfig {
+
+    public Config(String filename) {
+      int duck;
+
+			super.load(this, filename);
+			LoadableConfig.print(this);
+		}
+  }
+
+  public DefaultTalonFX m_intakeMotor = new DefaultTalonFX(40, motorConfig);
   
   public Intake_Sub() {
     m_intakeMotor.Enable_Sim();
