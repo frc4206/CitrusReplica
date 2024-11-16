@@ -11,11 +11,15 @@ import frc.robot.common.LoadableConfig;
 public class Conveyor_Sub extends SubsystemBase {
   /** Creates a new Conveyor_Sub. */
   DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("conveyorMotor");
-  
+  double kFeederVelocity = 60*(25/24);
   public class Config extends LoadableConfig{
 
-    public Config(String filename){
-      int dragon; 
+    public Config(String filename){ 
+
+      double StatorCurrentLimitEndable;
+      double StatorCurrentLimitEnable;
+      double PeakForwardVoltage;
+      double PeakReverseVoltage;
 
       super.load(this, filename); 
       LoadableConfig.print(this); 

@@ -14,10 +14,34 @@ public class Elevator_Sub extends SubsystemBase {
   DefaultTalonFX.Config elevatorConfig = new DefaultTalonFX.Config("elevatorMotor");
   DefaultTalonFX.Config elevatorConfig2 = new DefaultTalonFX.Config("panzerschokolade");
 
+  double kRotationsPerUnitDistance = 9/(1.432)*Math.PI;
+  kNeutralMode = NeutralModeValue.Brake;
+
   public class Config extends LoadableConfig {
 
     public Config(String filename) {
-      int fliegerfaust;
+      double kHomePosition;
+      double kMaxUnitsLimit;
+      double kMinUnitsLimit;
+      double kKp;
+      double kKi;
+      double kKd;
+      double kKa;
+      double kKg;
+      double kDeadband;
+      double kCruiseVelocity;
+      double kAcceleration;
+      double kRampRate;
+      double kMaxForwardOutput;
+      double kMaxReverseOutput;
+      double kEnableSupplyCurrentLimit;
+      boolean kSupplyCurrentLimit;
+      double kSupplyCurrentThreshold;
+      double kSupplyCurrentTimeout;
+      double kHomingZone;
+      double kHomingTimeout;
+      double kHomingVelocity;
+      double kHomingOutput;
 
       super.load(this, filename);
       LoadableConfig.print(this);
