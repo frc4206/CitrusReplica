@@ -16,7 +16,8 @@ public class Intake_Sub extends SubsystemBase {
   public class Config extends LoadableConfig {
 
     public Config(String filename) {
-      int duck;
+      double intakeVoltage;
+      double outakeVoltage;
 
 			super.load(this, filename);
 			LoadableConfig.print(this);
