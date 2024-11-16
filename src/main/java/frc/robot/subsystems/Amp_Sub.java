@@ -26,20 +26,20 @@ public class Amp_Sub extends SubsystemBase {
   public DefaultTalonFX m_ampMotor = new DefaultTalonFX(50, ampConfig);
 
   public Amp_Sub() {
-    m_ampMotor.Enable_Sim();
+    //m_ampMotor.Enable_Sim();
     //m_ampMotor.Log_Data_To_Smart_Dashboard();
   }
 
   @Override
   public void periodic() {
     // This method will be called once per scheduler run
-    m_ampMotor.Update();
+    //m_ampMotor.Update();
   }
 
   @Override
   public void simulationPeriodic() {
     super.simulationPeriodic();
-    m_ampMotor.Update_Sim();
-    m_ampMotor.Duty_Cycle(0.5, false);
+    //m_ampMotor.Update_Sim();
+    //m_ampMotor.Duty_Cycle(0.5, false);
   }
 }
