@@ -1,1 +1,4 @@
-dragon = 1; 
+StatorCurrentLimitEndable = 12
+StatorCurrentLimitEnable = 80
+PeakForwardVoltage = 12
+PeakReverseVoltage = -12
