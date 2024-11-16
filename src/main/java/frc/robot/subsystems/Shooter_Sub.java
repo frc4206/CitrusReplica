@@ -19,7 +19,7 @@ public class Shooter_Sub extends SubsystemBase {
   public class Config extends LoadableConfig {
 
     public Config(String filename) {
-      int pegasus; 
+      int pegasus;
 
       super.load(this, filename); 
       LoadableConfig.print(this); 
