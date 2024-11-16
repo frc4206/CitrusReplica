@@ -11,11 +11,13 @@ import frc.robot.common.LoadableConfig;
 public class Pivot_Sub extends SubsystemBase {
   /** Creates a new Pivot_Sub. */
   DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("pivotMotor");
+  Pivot_Sub.Config cfg;
   
-  public class Config extends LoadableConfig {
-
+  public static class Config extends LoadableConfig {
+    public double home;
+    public double activated;
+    int cow;
     public Config(String filename) {
-      int cow;
 
 			super.load(this, filename);
 			LoadableConfig.print(this);
@@ -23,7 +25,17 @@ public class Pivot_Sub extends SubsystemBase {
   }
 
   public DefaultTalonFX m_pivotMotor = new DefaultTalonFX(motorConfig);
-  public Pivot_Sub() {}
+  public Pivot_Sub(Pivot_Sub.Config cfg) {
+    this.cfg = cfg;
+  }
+
+  public void DutyCycle(double p) {
+    m_pivotMotor.Duty_Cycle_Output(p);
+  }
+
+  public void PID (double pos) {
+    m_pivotMotor.Motion_Magic_Pos(pos);
+  }
 
   @Override
   public void periodic() {
