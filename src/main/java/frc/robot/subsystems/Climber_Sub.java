@@ -10,7 +10,7 @@ import frc.robot.common.LoadableConfig;
 
 public class Climber_Sub extends SubsystemBase {
   /** Creates a new Climber_Sub. */
-  DefaultTalonFX.Config Mallard = new DefaultTalonFX.Config("Canadain Goose");
+  DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("ClimberMotor");
 
   
   public class  Config  extends LoadableConfig {
@@ -22,7 +22,7 @@ public class Climber_Sub extends SubsystemBase {
     }
   }
 
-  public DefaultTalonFX m_climberMotor = new DefaultTalonFX(70,Mallard);
+  public DefaultTalonFX m_climberMotor = new DefaultTalonFX(70,motorConfig);
 
 
   public Climber_Sub() {}
