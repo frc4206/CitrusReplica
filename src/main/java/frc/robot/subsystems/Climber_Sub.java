@@ -6,10 +6,24 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.common.DefaultTalonFX;
+import frc.robot.common.LoadableConfig;
 
 public class Climber_Sub extends SubsystemBase {
   /** Creates a new Climber_Sub. */
-  public DefaultTalonFX m_climberMotor = new DefaultTalonFX(70);
+  DefaultTalonFX.Config Mallard = new DefaultTalonFX.Config("Canadain Goose");
+
+  
+  public class  Config  extends LoadableConfig {
+    public Config(String filename){
+      int pekin;
+
+      super.load(this, filename);
+      LoadableConfig.print(this);
+    }
+  }
+
+  public DefaultTalonFX m_climberMotor = new DefaultTalonFX(70,Mallard);
+
 
   public Climber_Sub() {}
 
