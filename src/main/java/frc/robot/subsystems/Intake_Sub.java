@@ -10,12 +10,17 @@ import frc.robot.common.LoadableConfig;
 
 public class Intake_Sub extends SubsystemBase {
   /** Creates a new Intake_Sub. */
+public double kRotationPerUnitDistance = (1/360)*45;
 
   DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("intakemotor.toml");
   
   public static class Config extends LoadableConfig {
     public double intakeVoltage;
     public double outakeVoltage;
+    public double SupplyCurrentLimit;
+    public double PeakForwardVoltage;
+    public double PeakReverseVoltage;
+    public boolean SupplyCurrentLimitEnable;
 
     public Config(String filename) {
 

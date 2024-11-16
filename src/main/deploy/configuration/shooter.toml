@@ -1,1 +1,9 @@
-pegasus = 1
+kCompGearRatio = 1.6
+kEpsilonTopGearRatio = 1.6
+kEpsilonBottomGearRatio = 1.6
+kFlywheelTolera = 1000.0
+SupplyCurrentLimit = 20.0
+SupplyCurrentLimitEnable = true
+SupplyTimeThreshold = 0.5
+StatorCurrentLimitEnable = true
+StatorCurrentLimit = 80.0

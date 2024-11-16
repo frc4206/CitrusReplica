@@ -1,1 +1,4 @@
-crab = 45
+PeakReverseVoltage = -12.0
+PeakForwardVoltage = 12.0
+StatorCurrentLimit = 80.0
+StatorCurrentLimitEnable = true

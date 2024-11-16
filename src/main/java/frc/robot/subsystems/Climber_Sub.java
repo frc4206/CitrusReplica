@@ -14,8 +14,20 @@ public class Climber_Sub extends SubsystemBase {
 
   
   public class  Config  extends LoadableConfig {
+    public double kHomePosition;
+    public double kCruiseVelocity;
+    public double kAcceleration;
+    public double kMaxUnitsLimit;
+    public double kMinUnitsLimit;
+    public double kEnableSupplyCurrentLimit;
+    public double kSupplyCurrentLimit;
+    public double kSupplyCurrentThreshold;
+    public double kSupplyCurrentTimeout;
+    public double kMaxForwardOutput;
+    public double kMaxReverseOutput;
+
     public Config(String filename){
-      int pekin;
+      
 
       super.load(this, filename);
       LoadableConfig.print(this);

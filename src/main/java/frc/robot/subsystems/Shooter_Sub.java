@@ -14,12 +14,21 @@ public class Shooter_Sub extends SubsystemBase {
   DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("shooterMotor1");
   DefaultTalonFX.Config motorConfig2 = new DefaultTalonFX.Config("shooterMotor2");
   DefaultTalonFX.Config motorConfig3 = new DefaultTalonFX.Config("shooterMotor3");
-
+   public double kCompGearRatio;
+    public double kEpsilonTopGearRatio;
+    public double kEpsilonBottomGearRatio;
 
   public class Config extends LoadableConfig {
-
+    
+    public double kFlywheelTolerance;
+    public double SupplyCurrentLimit;
+    public boolean SupplyCurrentLimitEnable;
+    public double SupplyTimeThreshold;
+    public boolean StatorCurrentLimitEnable;
+    public boolean StatorCurrentLimit;
+    
     public Config(String filename) {
-      int pegasus; 
+       
 
       super.load(this, filename); 
       LoadableConfig.print(this); 

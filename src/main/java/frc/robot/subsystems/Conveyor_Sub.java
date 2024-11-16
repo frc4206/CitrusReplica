@@ -13,9 +13,9 @@ public class Conveyor_Sub extends SubsystemBase {
   DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("conveyorMotor");
   
   public class Config extends LoadableConfig{
-
+     
     public Config(String filename){
-      int dragon; 
+      
 
       super.load(this, filename); 
       LoadableConfig.print(this); 

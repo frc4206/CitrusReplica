@@ -13,9 +13,14 @@ public class Pivot_Sub extends SubsystemBase {
   DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("pivotMotor");
   
   public class Config extends LoadableConfig {
+    public double kHomePosition;
+    public double kMaxUnitsLimits;
+    public double kMinUnitsLimits;
+    public double kCruiseVelocity;
+    public double kAcceleration;
 
     public Config(String filename) {
-      int cow;
+      
 
 			super.load(this, filename);
 			LoadableConfig.print(this);

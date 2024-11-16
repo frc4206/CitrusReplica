@@ -15,9 +15,9 @@ public class Elevator_Sub extends SubsystemBase {
   DefaultTalonFX.Config elevatorConfig2 = new DefaultTalonFX.Config("panzerschokolade");
 
   public class Config extends LoadableConfig {
-
+    
     public Config(String filename) {
-      int fliegerfaust;
+      
 
       super.load(this, filename);
       LoadableConfig.print(this);

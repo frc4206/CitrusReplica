@@ -1,2 +1,6 @@
 intakeVoltage = 8.0
 outakeVoltage = -6.0
+SupplyCurrentLimitEnable = true
+PeakReverseVoltage = -12.0
+PeakForwardVoltage = 12.0
+SupplyCurrentLimit = 40.0

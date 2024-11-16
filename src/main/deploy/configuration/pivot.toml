@@ -1,1 +1,5 @@
-cow = 1
+kAcceleration = 10000.0
+kCruiseVelocity = 400.0
+kMinUnitsLimits = 0
+kMaxUnitsLimits = 128.1
+kHomePosition = 128.1
