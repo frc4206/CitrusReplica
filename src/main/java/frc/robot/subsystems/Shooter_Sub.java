@@ -26,9 +26,9 @@ public class Shooter_Sub extends SubsystemBase {
     }
   }
 
-  public DefaultTalonFX m_shooterMotor1 = new DefaultTalonFX(90, motorConfig);
-  public DefaultTalonFX m_shooterMotor2 = new DefaultTalonFX(91, motorConfig2);
-  public DefaultTalonFX m_shooterMotor3 = new DefaultTalonFX(92, motorConfig3);
+  public DefaultTalonFX m_shooterMotor1 = new DefaultTalonFX(motorConfig);
+  public DefaultTalonFX m_shooterMotor2 = new DefaultTalonFX(motorConfig2);
+  public DefaultTalonFX m_shooterMotor3 = new DefaultTalonFX(motorConfig3);
 
   public Shooter_Sub() {}
 

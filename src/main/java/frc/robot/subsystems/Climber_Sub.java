@@ -22,7 +22,7 @@ public class Climber_Sub extends SubsystemBase {
     }
   }
 
-  public DefaultTalonFX m_climberMotor = new DefaultTalonFX(70,motorConfig);
+  public DefaultTalonFX m_climberMotor = new DefaultTalonFX(motorConfig);
 
 
   public Climber_Sub() {}

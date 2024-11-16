@@ -23,7 +23,7 @@ public class Amp_Sub extends SubsystemBase {
     }
     
   }
-  public DefaultTalonFX m_ampMotor = new DefaultTalonFX(50, ampConfig);
+  public DefaultTalonFX m_ampMotor = new DefaultTalonFX(ampConfig);
 
   public Amp_Sub() {
     //m_ampMotor.Enable_Sim();

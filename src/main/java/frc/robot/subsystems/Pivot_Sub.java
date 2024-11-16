@@ -22,7 +22,7 @@ public class Pivot_Sub extends SubsystemBase {
 		}
   }
 
-  public DefaultTalonFX m_pivotMotor = new DefaultTalonFX(45, motorConfig);
+  public DefaultTalonFX m_pivotMotor = new DefaultTalonFX(motorConfig);
   public Pivot_Sub() {}
 
   @Override

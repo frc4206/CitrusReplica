@@ -24,7 +24,7 @@ public class Intake_Sub extends SubsystemBase {
 		}
   }
   
-  public DefaultTalonFX m_intakeMotor = new DefaultTalonFX(40, motorConfig);
+  public DefaultTalonFX m_intakeMotor = new DefaultTalonFX(motorConfig);
   
   public Intake_Sub(Intake_Sub.Config cfg) {
     m_intakeMotor.Enable_Sim();

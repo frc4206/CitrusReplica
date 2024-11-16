@@ -22,7 +22,7 @@ public class Conveyor_Sub extends SubsystemBase {
     }
   }
 
-  public DefaultTalonFX m_conveyorMotor = new DefaultTalonFX(80, motorConfig);
+  public DefaultTalonFX m_conveyorMotor = new DefaultTalonFX(motorConfig);
 
   public Conveyor_Sub() {}
 

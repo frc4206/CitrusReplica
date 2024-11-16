@@ -54,15 +54,13 @@ public class DefaultTalonFX {
 
     private double desired_Percent = 0;
 
-    public DefaultTalonFX (int CANid, DefaultTalonFX.Config cfg) {
-        motor = new TalonFX(CANid);
+    public DefaultTalonFX (DefaultTalonFX.Config cfg) {
         this.cfg = cfg;
+        motor = new TalonFX(this.cfg.canID);
 
         setSlot0(cfg.slot0);
         setSlot1(cfg.slot1);
         setSlot2(cfg.slot2);
-
-        Set_Request(new DutyCycleOut(CANid));
     }
 
     public static class BasicSlot extends LoadableConfig {

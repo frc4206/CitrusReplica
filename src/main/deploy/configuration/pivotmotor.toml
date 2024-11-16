@@ -1,5 +1,5 @@
 name = "pivotMotor"
-canID = 40
+canID = 45
 inverted = false
 
 [slot0]

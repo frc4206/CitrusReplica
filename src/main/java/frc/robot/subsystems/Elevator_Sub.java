@@ -23,8 +23,8 @@ public class Elevator_Sub extends SubsystemBase {
       LoadableConfig.print(this);
     }
   }
-  public DefaultTalonFX m_elevatorMotor1 = new DefaultTalonFX(60, elevatorConfig);
-  public DefaultTalonFX m_elevatorMotor2 = new DefaultTalonFX(61,elevatorConfig2);
+  public DefaultTalonFX m_elevatorMotor1 = new DefaultTalonFX(elevatorConfig);
+  public DefaultTalonFX m_elevatorMotor2 = new DefaultTalonFX(elevatorConfig2);
   
   public Elevator_Sub() {
     //m_elevatorMotor1.Enable_Sim();
