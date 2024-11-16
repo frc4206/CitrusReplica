@@ -1,6 +1,6 @@
 kAcceleration = 10000.0
 kCruiseVelocity = 400.0
-kMinUnitsLimits = 0
+kMinUnitsLimits = 0.0
 kMaxUnitsLimits = 128.1
 kHomePosition = 128.1
-kExtendedPosition = 0
+kExtendedPosition = 0.0
