@@ -15,6 +15,7 @@ public class Pivot_Sub extends SubsystemBase {
   
   public class Config extends LoadableConfig {
     public double kHomePosition;
+    public double kExtendedPosition;
     public double kMaxUnitsLimits;
     public double kMinUnitsLimits;
     public double kCruiseVelocity;

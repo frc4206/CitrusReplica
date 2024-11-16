@@ -15,7 +15,7 @@ public class Elevator_Sub extends SubsystemBase {
   DefaultTalonFX.Config elevatorConfig2 = new DefaultTalonFX.Config("panzerschokolade");
 
   double kRotationsPerUnitDistance = 9/(1.432)*Math.PI;
-  kNeutralMode = NeutralModeValue.Brake;
+  //kNeutralMode = NeutralModeValue.Brake;
 
   public class Config extends LoadableConfig {
     

@@ -85,8 +85,8 @@ public class RobotContainer {
     joystick.leftBumper().onTrue(new InstantCommand(() -> m_pivot_Sub.DutyCycle(-0.2)));
     joystick.leftBumper().onFalse(new InstantCommand(() -> m_pivot_Sub.DutyCycle(0)));
 
-    joystick.leftTrigger().onTrue(new InstantCommand(() -> m_pivot_Sub.PID(pivot_cfg.home)));
-    joystick.rightTrigger().onTrue(new InstantCommand(() -> m_pivot_Sub.PID(pivot_cfg.activated)));
+    joystick.leftTrigger().onTrue(new InstantCommand(() -> m_pivot_Sub.PID(pivot_cfg.kHomePosition)));
+    joystick.rightTrigger().onTrue(new InstantCommand(() -> m_pivot_Sub.PID(pivot_cfg.kExtendedPosition)));
     //m_intake_Sub.setDefaultCommand(new Intake_Com(m_intake_Sub, joystick.getRawAxis(1)));
   }
 
