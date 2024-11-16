@@ -6,11 +6,23 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.common.DefaultTalonFX;
+import frc.robot.common.LoadableConfig;
 
 public class Conveyor_Sub extends SubsystemBase {
   /** Creates a new Conveyor_Sub. */
-  public DefaultTalonFX m_conveyorMotor = new DefaultTalonFX(80);
+  DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("conveyorMotor");
   
+  public class Config extends LoadableConfig{
+
+    public Config(String filename){
+      int dragon; 
+
+      super.load(this, filename); 
+      LoadableConfig.print(this); 
+    }
+  }
+
+  public DefaultTalonFX m_conveyorMotor = new DefaultTalonFX(80, motorConfig);
 
   public Conveyor_Sub() {}
 
@@ -18,4 +30,6 @@ public class Conveyor_Sub extends SubsystemBase {
   public void periodic() {
     // This method will be called once per scheduler run
   }
+
+
 }

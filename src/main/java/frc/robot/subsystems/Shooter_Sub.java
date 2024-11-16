@@ -6,11 +6,29 @@ package frc.robot.subsystems;
 
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.common.DefaultTalonFX;
+import frc.robot.common.LoadableConfig;
 
 
 public class Shooter_Sub extends SubsystemBase {
   /** Creates a new Shooter_Sub. */
-  public DefaultTalonFX m_shooterMotor = new DefaultTalonFX(90);
+  DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("shooterMotor1");
+  DefaultTalonFX.Config motorConfig2 = new DefaultTalonFX.Config("shooterMotor2");
+  DefaultTalonFX.Config motorConfig3 = new DefaultTalonFX.Config("shooterMotor3");
+
+
+  public class Config extends LoadableConfig {
+
+    public Config(String filename) {
+      int pegasus; 
+
+      super.load(this, filename); 
+      LoadableConfig.print(this); 
+    }
+  }
+
+  public DefaultTalonFX m_shooterMotor1 = new DefaultTalonFX(90, motorConfig);
+  public DefaultTalonFX m_shooterMotor2 = new DefaultTalonFX(91, motorConfig2);
+  public DefaultTalonFX m_shooterMotor3 = new DefaultTalonFX(92, motorConfig3);
 
   public Shooter_Sub() {}
 
