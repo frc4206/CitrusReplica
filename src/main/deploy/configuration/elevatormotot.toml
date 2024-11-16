@@ -1,6 +1,6 @@
-name = "ampMotor"
-canID = 50
-inverted = 50
+name = "elevatorMotor"
+canID = 60
+inverted = false
 
 [slot0]
 kp = 0
