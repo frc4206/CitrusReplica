@@ -14,10 +14,14 @@ import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.Commands;
 import edu.wpi.first.wpilibj2.command.button.CommandXboxController;
+import frc.robot.commands.Intake_Com;
 import frc.robot.generated.TunerConstants;
 import frc.robot.subsystems.CommandSwerveDrivetrain;
+import frc.robot.subsystems.Intake_Sub;
 
 public class RobotContainer {
+
+  //Auto generated Swerve stuff (do not mess with unless otherwise told to)
   private double MaxSpeed = TunerConstants.kSpeedAt12VoltsMps; // kSpeedAt12VoltsMps desired top speed
   private double MaxAngularRate = 1.5 * Math.PI; // 3/4 of a rotation per second max angular velocity
 
@@ -33,6 +37,14 @@ public class RobotContainer {
   private final SwerveRequest.PointWheelsAt point = new SwerveRequest.PointWheelsAt();
 
   private final Telemetry logger = new Telemetry(MaxSpeed);
+
+  //Define config files
+  public Intake_Sub.Config intake_cfg = new Intake_Sub.Config("intake.toml");
+
+  //Define subsystems
+  private final Intake_Sub m_intake_Sub = new Intake_Sub(intake_cfg);
+  
+  
 
   private void configureBindings() {
     drivetrain.setDefaultCommand( // Drivetrain will execute this command periodically
@@ -53,6 +65,17 @@ public class RobotContainer {
       drivetrain.seedFieldRelative(new Pose2d(new Translation2d(), Rotation2d.fromDegrees(90)));
     }
     drivetrain.registerTelemetry(logger::telemeterize);
+
+
+
+
+
+
+    //Subsystem Control joystick.getRawAxis(0)
+    joystick.a().whileTrue(new Intake_Com(m_intake_Sub, intake_cfg.intakeVoltage));
+    joystick.b().whileTrue(new Intake_Com(m_intake_Sub, intake_cfg.outakeVoltage));
+
+    //m_intake_Sub.setDefaultCommand(new Intake_Com(m_intake_Sub, joystick.getRawAxis(1)));
   }
 
   public RobotContainer() {

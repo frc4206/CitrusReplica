@@ -11,22 +11,22 @@ import frc.robot.common.LoadableConfig;
 public class Intake_Sub extends SubsystemBase {
   /** Creates a new Intake_Sub. */
 
-  DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("intakeMotor");
+  DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("intakemotor.toml");
   
-  public class Config extends LoadableConfig {
+  public static class Config extends LoadableConfig {
+    public double intakeVoltage;
+    public double outakeVoltage;
 
     public Config(String filename) {
-      double intakeVoltage;
-      double outakeVoltage;
 
 			super.load(this, filename);
 			LoadableConfig.print(this);
 		}
   }
-
+  
   public DefaultTalonFX m_intakeMotor = new DefaultTalonFX(40, motorConfig);
   
-  public Intake_Sub() {
+  public Intake_Sub(Intake_Sub.Config cfg) {
     m_intakeMotor.Enable_Sim();
     m_intakeMotor.Log_Data_To_Smart_Dashboard();
   }
@@ -37,10 +37,15 @@ public class Intake_Sub extends SubsystemBase {
     m_intakeMotor.Update();
   }
 
+  public void SetVoltage(double volts) {
+    m_intakeMotor.Voltage_Output(volts);
+  }
+
+
   @Override
   public void simulationPeriodic() {
       super.simulationPeriodic();
       m_intakeMotor.Update_Sim();
-      m_intakeMotor.Duty_Cycle(0.5, false);
+      //m_intakeMotor.Duty_Cycle(0.5, false);
   }
 }

@@ -1,2 +1,2 @@
-intakeVoltage = 8
-outakeVoltage = 6
+intakeVoltage = 8.0
+outakeVoltage = -6.0

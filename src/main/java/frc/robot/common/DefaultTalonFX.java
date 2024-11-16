@@ -56,6 +56,7 @@ public class DefaultTalonFX {
 
     public DefaultTalonFX (int CANid, DefaultTalonFX.Config cfg) {
         motor = new TalonFX(CANid);
+        this.cfg = cfg;
 
         setSlot0(cfg.slot0);
         setSlot1(cfg.slot1);
