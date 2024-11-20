@@ -1,4 +1,4 @@
-name = "intakeMotor"
+name = "intakeMotorConfig"
 canID = 40
 inverted = false
 

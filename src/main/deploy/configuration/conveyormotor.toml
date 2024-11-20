@@ -1,4 +1,4 @@
-name = "conveyorMotor" 
+name = "conveyorMotorConfig" 
 canID = 80
 inverted = false
 

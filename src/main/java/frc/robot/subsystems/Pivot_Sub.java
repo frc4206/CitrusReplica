@@ -10,7 +10,7 @@ import frc.robot.common.LoadableConfig;
 
 public class Pivot_Sub extends SubsystemBase {
   /** Creates a new Pivot_Sub. */
-  DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("pivotmotor.toml");
+  DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("pivotMotor");
   Pivot_Sub.Config cfg;
   
   public static class Config extends LoadableConfig {

@@ -83,6 +83,7 @@ dependencies {
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 
     implementation 'org.tomlj:tomlj:1.1.1'
+    implementation 'org.team4206:battleaid:0.1.1'
 }
 
 test {

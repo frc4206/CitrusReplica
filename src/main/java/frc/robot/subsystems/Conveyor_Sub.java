@@ -10,7 +10,7 @@ import frc.robot.common.LoadableConfig;
 
 public class Conveyor_Sub extends SubsystemBase {
   /** Creates a new Conveyor_Sub. */
-  DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("conveyorMotor");
+  DefaultTalonFX.Config conveyorConfig = new DefaultTalonFX.Config("conveyorMotorConfig");
   double kFeederVelocity = 60*(25/24);
   public class Config extends LoadableConfig{
 
@@ -26,7 +26,7 @@ public class Conveyor_Sub extends SubsystemBase {
     }
   }
 
-  public DefaultTalonFX m_conveyorMotor = new DefaultTalonFX(motorConfig);
+  public DefaultTalonFX m_conveyorMotor = new DefaultTalonFX(conveyorConfig);
 
   public Conveyor_Sub() {}
 

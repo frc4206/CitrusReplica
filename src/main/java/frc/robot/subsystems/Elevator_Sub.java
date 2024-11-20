@@ -11,8 +11,8 @@ import frc.robot.common.LoadableConfig;
 public class Elevator_Sub extends SubsystemBase {
   /** Creates a new Elevator_Sub. */
 
-  DefaultTalonFX.Config elevatorConfig = new DefaultTalonFX.Config("elevatorMotor");
-  DefaultTalonFX.Config elevatorConfig2 = new DefaultTalonFX.Config("panzerschokolade");
+  DefaultTalonFX.Config elevatorConfig = new DefaultTalonFX.Config("elevatorMotorConfig");
+  DefaultTalonFX.Config elevatorConfig2 = new DefaultTalonFX.Config("elevatorMotor2Config");//still "panzerschokolade" at heart
 
   double kRotationsPerUnitDistance = 9/(1.432)*Math.PI;
   //kNeutralMode = NeutralModeValue.Brake;

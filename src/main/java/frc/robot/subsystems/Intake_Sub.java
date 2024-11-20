@@ -12,7 +12,7 @@ public class Intake_Sub extends SubsystemBase {
   /** Creates a new Intake_Sub. */
 public double kRotationPerUnitDistance = (1/360)*45;
 
-  DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("intakemotor.toml");
+  DefaultTalonFX.Config motorConfig = new DefaultTalonFX.Config("intakeMotorConfig");
   
   public static class Config extends LoadableConfig {
     public double intakeVoltage;
