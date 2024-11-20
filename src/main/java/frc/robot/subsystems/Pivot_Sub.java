@@ -4,9 +4,10 @@
 
 package frc.robot.subsystems;
 
+import org.team4206.battleaid.common.LoadableConfig;
+
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.common.DefaultTalonFX;
-import frc.robot.common.LoadableConfig;
 
 public class Pivot_Sub extends SubsystemBase {
   /** Creates a new Pivot_Sub. */

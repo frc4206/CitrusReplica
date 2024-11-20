@@ -3,6 +3,8 @@ import javax.swing.plaf.basic.BasicComboBoxUI.FocusHandler;
 import javax.swing.plaf.basic.BasicTreeUI.TreeCancelEditingAction;
 import javax.swing.text.StyleContext.SmallAttributeSet;
 
+import org.team4206.battleaid.common.LoadableConfig;
+
 import com.ctre.phoenix6.Utils;
 import com.ctre.phoenix6.configs.ParentConfiguration;
 import com.ctre.phoenix6.configs.Slot0Configs;

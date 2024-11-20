@@ -4,9 +4,10 @@
 
 package frc.robot.subsystems;
 
+import org.team4206.battleaid.common.LoadableConfig;
+
 import edu.wpi.first.wpilibj2.command.SubsystemBase;
 import frc.robot.common.DefaultTalonFX;
-import frc.robot.common.LoadableConfig;
 
 public class Intake_Sub extends SubsystemBase {
   /** Creates a new Intake_Sub. */
