@@ -42,6 +42,10 @@ public class Shooter_Sub extends SubsystemBase {
 
   public Shooter_Sub() {}
 
+  // public void SetVoltage(double volts) {
+  //   m_shooterMotor1.Voltage_Output(volts);
+  // }
+
   
   @Override
   public void periodic() {
